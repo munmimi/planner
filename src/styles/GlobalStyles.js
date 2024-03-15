@@ -40,7 +40,6 @@ figcaption,
 span {
   margin: 0;
   padding: 0;
-  letter-spacing: -0.5px;
 }
 
 body,
@@ -236,8 +235,11 @@ select::-ms-expand {
 }
 
 
-
+.container{
+  height: 100vh;
+}
 
 `
 
 export default GlobalStyles;
+

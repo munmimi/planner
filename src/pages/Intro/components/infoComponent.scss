@@ -1,0 +1,67 @@
+.info_wrap{
+  width: calc(100% - 504px);
+  position: relative;
+  padding-top: 100px;
+  .btn_wrap{
+    button{
+      width: 100%;
+      height: 62px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      padding: 0 29px;
+      border-bottom: solid 1px #404040;
+      font-size: inherit;
+    color: inherit;
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      transition: .4s ease-out;
+    }
+
+    &:hover{
+      background-color: #404040;
+      color: #fff;
+      &::after{
+        width: 124px;
+        margin-left: 20px;
+      }
+    }
+    }
+  }
+  .info_inner{
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    height: calc(100% - 186px);
+    i{
+      width: 102px;
+      height: 115px;
+      display: inline-block;
+      background: url(../../../../public/images/icons/mark_bk_big.png) no-repeat;
+      background-size: cover;
+      animation: rotate 12s linear infinite;
+    }
+    @keyframes rotate {
+      0%{rotate: 0;}
+      100%{rotate: -360deg;}
+      
+    }
+    p{
+      padding-left: 50px;
+      padding-bottom: 20px;
+      font-style: italic;
+    }
+  }
+  mark{
+    writing-mode: vertical-lr;
+    position: absolute;
+    right: 10px;
+    bottom: 17px;
+    background-color: transparent;
+    color: inherit;
+  }
+}
