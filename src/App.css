@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+
+
+/* ======================================== 한글 폰트 */
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  unicode-range: U+AC00-D7A3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  unicode-range: U+AC00-D7A3;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  unicode-range: U+AC00-D7A3;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  unicode-range: U+AC00-D7A3;
+
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  unicode-range: U+AC00-D7A3;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  unicode-range: U+AC00-D7A3;
+
 }
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  unicode-range: U+AC00-D7A3;
+
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  unicode-range: U+AC00-D7A3;
+
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  src: url('./fonts/pretendard/Pretendard-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  unicode-range: U+AC00-D7A3;
+
+}
+
+
+/* ======================================= 영문 폰트 */
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: normal;
+  src: url('./fonts/PPNeueMontreal/PPNeueMontreal-Thin.otf') format('otf');
+  font-weight: 100;
+  unicode-range: U+0041-005A,U+0061-007A,U+0030-0039;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: normal;
+  src: url('./fonts/PPNeueMontreal/PPNeueMontreal-Book.otf') format('otf');
+  font-weight: 400;
+  unicode-range: U+0041-005A,U+0061-007A,U+0030-0039;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: normal;
+  src: url('./fonts/PPNeueMontreal/PPNeueMontreal-Medium.otf') format('otf');
+  font-weight: 500;
+  unicode-range: U+0041-005A,U+0061-007A,U+0030-0039;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: normal;
+  src: url('./fonts/PPNeueMontreal/PPNeueMontreal-Bold.otf') format('otf');
+  font-weight: 700;
+  unicode-range: U+0041-005A,U+0061-007A,U+0030-0039;
+}
+
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: italic;
+  src: url('./fonts/PPNeueMontreal/PPNeueMontreal-Italic.otf') format('otf');
+  font-weight: 400;
+  unicode-range: U+0041-005A,U+0061-007A,U+0030-0039;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-style: italic;
+  src: url('./fonts/PPNeueMontreal/PPNeueMontreal-SemiBolditalic.otf') format('otf');
+  font-weight: 600;
+  unicode-range: U+0041-005A,U+0061-007A,U+0030-0039;
+}
+
+
+
