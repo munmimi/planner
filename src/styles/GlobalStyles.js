@@ -153,6 +153,8 @@ button,
 input {
   border: none;
   background: none;
+  color: inherit;
+  font-family: inherit;
 }
 
 button:focus,
@@ -236,7 +238,7 @@ select::-ms-expand {
 
 
 .container{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 `

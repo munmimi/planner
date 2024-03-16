@@ -3,22 +3,23 @@ import Theme from "../../styles/Theme";
 import SpiritsSwiper from "./components/SpiritsSwiper";
 import InfoComponent from "./components/InfoComponent";
 
-import "./intro.scss";
+// import "./intro.scss";
+import S from "./styles";
 
 
 const Intro = () => {
   
   return (
-    <section className="container" style={{ color: Theme.colors.grey }}>
-      <div className="top">
+    <S.Section className="container">
+      <S.Div className="top">
         
           <InfoComponent/>
      
-        <div className="top-r">
+        <div className="imgBox">
           <img src="/images/profile.png"/>
         </div>
-      </div>
-      <div className="bot">
+      </S.Div>
+      <S.Div className="bot">
         <div className="bot-l">
           <div className="bot-l-t">
             <h2 style={{ fontSize: Theme.fontSize.h2 }}>Skills</h2>
@@ -35,8 +36,8 @@ const Intro = () => {
         <div className="bot-r">
          <SpiritsSwiper/>
         </div>
-      </div>
-    </section>
+      </S.Div>
+    </S.Section>
   );
 };
 

@@ -1,16 +1,13 @@
 .top{
   display: flex;
-  height: calc(100% - 454px);
-  border-bottom: solid 1px #404040;
+
   
   &-r{
     width: 504px;
     padding: 40px;
     padding-top: 140px;
     border-left: solid 1px #404040;
-    display: flex;
-    align-items: center;
-    justify-self: center;
+ 
   }
 }
 .bot{
