@@ -237,10 +237,6 @@ select::-ms-expand {
 }
 
 
-.container{
-  min-height: 100vh;
-}
-
 `
 
 export default GlobalStyles;
