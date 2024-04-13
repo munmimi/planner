@@ -4,12 +4,17 @@ import Intro from "../pages/Intro/Intro";
 import Calendar from "../pages/calendar/Calendar";
 import Memo from "../pages/memo/Memo";
 import notFoundError from "../pages/notFoundError/notFoundError";
+import Main from "../pages/main/Main";
 
 const router = createBrowserRouter([
     {
         path:'/',
         element:<Layout/>,
         children:[
+            {
+                path:'/',
+                element:<Main/>
+            },
             {
                 path:'/calendar',
                 element:<Calendar/>

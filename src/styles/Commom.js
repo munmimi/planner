@@ -39,3 +39,22 @@ export const borderBottom = css`
 
 `
 
+export const rotateKeyframes = css `
+@keyframes rotateAni {
+    0%{ rotate:0deg}
+    100%{ rotate:360deg}
+  }
+`
+
+export const borderRowAni = css `
+@keyframes borderRowAni {
+  0%{width:0%;opacity:0;}
+  100%{width:100%;opacity:1;}
+}
+`
+export const borderColAni = css `
+@keyframes borderColAni {
+  0%{height:0%;opacity:0;}
+  100%{height:100%;opacity:1;}
+}
+`

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import Theme from './Theme';
 
 const GlobalStyles = createGlobalStyle`
 ${reset}
@@ -82,7 +83,7 @@ body {
   height: 100%;
   font-family: 'PP Neue Montreal','Pretendard', sans-serif;
   font-size: 10px;
-  color: #0d0d0d;
+  color: ${Theme.colors.grey};
 
 }
 
@@ -155,6 +156,7 @@ input {
   background: none;
   color: inherit;
   font-family: inherit;
+  color: inherit;
 }
 
 button:focus,
@@ -236,6 +238,9 @@ select::-ms-expand {
   /* 화살표 없애기 for IE10, 11*/
 }
 
+*-webkit-scrollbar{
+  display: none;
+}
 
 `
 

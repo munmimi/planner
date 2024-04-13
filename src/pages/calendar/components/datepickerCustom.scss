@@ -1,0 +1,100 @@
+@import '../../../styles/prefix.scss';
+
+// datepicker
+.react-datepicker{
+  color: $color-grey;
+  border-color: $color-grey;
+  font-family: inherit;
+  border-radius: 0;
+  font-size: $fs-small;
+  border: none;
+  *{
+    color: $color-grey;
+    border-color: $color-grey;
+    font-family: inherit;
+    // background-color: $color-exLightGrey;
+    background-color: #fff;
+  }
+  .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name{
+    color: $color-black;
+  }
+  .react-datepicker__month,
+  .react-datepicker__header {
+    border: solid 1px $color-grey;
+    border-radius: 0;
+  }
+  .react-datepicker__header {
+    padding: 11px 0;
+  }
+  .react-datepicker__month{
+    border-top: none;
+    margin: 0;
+    padding: 11px 13px;
+    
+  }
+  .react-datepicker__navigation{
+    border: solid 1px $color-grey;
+    // position: relative;
+    top: 11px;
+    width: 43px;
+    height: 43px;
+    span{
+      display: none;
+    }
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: $color-grey;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      color: $color-grey;
+    }
+  }
+  .react-datepicker__navigation--previous{
+    left: 13px;
+  }
+  .react-datepicker__navigation--next{
+    right: 13px;
+  }
+  .react-datepicker__current-month{
+    font-size: $fs-small;
+    font-weight: 500;
+    line-height: 43px;
+  }
+  .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name{
+    width: 45px;
+
+    text-align: center;
+    line-height: 40px;
+    border-radius: 0;
+    box-sizing: border-box;
+    margin: 1px 0;
+
+  }
+  .react-datepicker__day-name{
+    line-height: 43px;
+  }
+  .react-datepicker__day{
+  }
+  .react-datepicker__day:hover{
+    background-color: #fff;
+    border: solid 1px $color-grey;
+    margin: 0;
+  }
+  .react-datepicker__day--today{
+    font-weight: 500;
+    font-style: italic;
+    // background-color: $color-exLightGrey;
+    border: dashed 1px $color-grey;
+    border-spacing: 4px;
+    margin: 0;
+
+  }
+}
+.react-datepicker__triangle {
+  display: none;
+}

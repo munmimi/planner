@@ -1,0 +1,238 @@
+@import "../../styles/prefix.scss";
+.calendar {
+  &-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  &-inner {
+    width: calc(100% - 247px);
+    height: 100%;
+    .calendar-head {
+      font-size: 20px;
+      > p {
+        width: calc(100% / 7);
+        padding-right: 20px;
+        text-align: right;
+        // &:nth-child(7){
+        //   color: $color-green;
+        // }
+        // &:first-child{
+        //   color: $color-purple;
+        // }
+      }
+    }
+    .calendar-body {
+      flex-wrap: wrap;
+      overflow-y: scroll;
+    }
+  }
+  &-info {
+    width: 247px;
+    height: 100%;
+    background-color: $color-exLightGrey;
+    border-left: solid 1px $color-grey;
+    position: relative;
+
+    .calendar-head {
+      font-size: $fs-h3;
+      padding-right: 40px;
+      font-style: italic;
+    }
+    .calendar-body {
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+  &-head {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-bottom: solid 1px $color-grey;
+  }
+  &-body {
+    display: flex;
+    height: calc(100% - 60px);
+
+    .info_inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 40px;
+      padding-bottom: 26px;
+      padding-left: 20px;
+      text-align: right;
+      i {
+        width: 32px;
+        height: 32px;
+        background: url(../../../public/images/icons/mark_bk_small.png)
+          no-repeat;
+        background-size: cover;
+        display: inline-block;
+      }
+      .title {
+        font-size: $fs-body;
+        font-weight: 600;
+        padding: 12px 0 25px;
+      }
+      .text {
+        font-size: $fs-body;
+        font-weight: 500;
+        word-break: keep-all;
+        line-height: 1.2;
+      }
+    }
+  }
+  &-btns {
+    display: flex;
+    height: 123px;
+    button {
+      width: 50%;
+      border-top: solid 1px $color-grey;
+      border-right: solid 1px $color-grey;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  &-date {
+    width: calc(100% / 7);
+    border-right: solid 1px $color-grey;
+    border-top: solid 1px $color-grey;
+    padding: 16px 14px 10px;
+    &:nth-child(n + 1):nth-child(-n + 7) {
+      border-top: none;
+    }
+    // &:nth-child(7n) {
+    //   border-right: none;
+    //   .date_num {
+    //     color: $color-green;
+    //   }
+    // }
+    // &:nth-child(7n + 1) .date_num {
+    //   color: $color-purple;
+    // }
+    &.other .date_num {
+      opacity: 0.5;
+    }
+    .date_num {
+      font-size: $fs-body;
+      text-align: right;
+    }
+    .todo_list {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      &-item {
+        padding: 4px 11px;
+        font-size: $fs-body;
+        border: solid 1px $color-grey;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        line-height: 1.2;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &-modal {
+    width: 342px;
+    position: absolute;
+    right: calc(100% + 1px);
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    border-left: solid 1px $color-grey;
+    display: none;
+    flex-direction: column;
+    &.is-active{
+      display: flex;
+    }
+    .top {
+      height: 162px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      padding-right: 18px;
+      i {
+        width: 122px;
+        height: 136px;
+        background-color: black;
+      }
+    }
+    .dep {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 20px 40px;
+
+      border-top: solid 1px $color-grey;
+      &.date input {
+        font-size: $fs-h3;
+        font-weight: 500;
+        color: $color-grey;
+        width: 100%;
+        text-align: right;
+      }
+      span {
+        margin-bottom: 40px;
+        font-size: $fs-h4;
+        font-weight: 500;
+      }
+      b,
+      input,
+      textarea {
+        font-size: $fs-h4;
+        text-align: right;
+      }
+      textarea {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+        height: 200px;
+        font-family: inherit;
+        &::placeholder {
+          font-style: italic;
+          color: $color-lightGrey;
+        }
+      }
+    }
+    &_delete {
+      padding-bottom: 123px;
+      // display: flex;
+      // flex-direction: column;
+      justify-content: flex-end;
+
+      h2 {
+        font-size: $fs-h4;
+        padding-right: 31px;
+        text-align: right;
+        padding-bottom: 20px;
+      }
+      button {
+        font-size: $fs-h3;
+        padding-right: 40px;
+        height: 60px;
+        text-align: right;
+        border-top: solid 1px $color-grey;
+        font-weight: 500;
+        color: inherit;
+        transition-property: color, background;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        &:last-child {
+          border-bottom: solid 1px $color-grey;
+        }
+        &:hover {
+          background-color: $color-grey;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

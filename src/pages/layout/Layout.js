@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "./footer/Footer";
-import S from "./Styles";
+import S from "./styles";
 
 const Layout = () => {
   return (
