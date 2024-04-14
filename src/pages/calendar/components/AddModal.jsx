@@ -3,10 +3,12 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import "./datepickerCustom.scss";
 
-const AddModal = () => {
+const AddModal = ({addActive}) => {
   const [startDate, setStartDate] = useState(new Date());
+  console.log(addActive);
+  
   return (
-    <div className="calendar-modal calendar-modal_add">
+    <div className={addActive ? "calendar-modal calendar-modal_add is-active":"calendar-modal calendar-modal_add"}>
       <p className="top">
         <i></i>
       </p>

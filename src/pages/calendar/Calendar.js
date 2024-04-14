@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./calendar.scss";
 import Day from "./components/Day";
 import AddModal from "./components/AddModal";
@@ -65,6 +65,22 @@ const Calendar = () => {
   };
   const { dates, firstDateIndex, lastDateIndex, viewYear, viewMonth } = renderCalendar();
 
+
+  // 
+  const [addActive,setAddActive] = useState(false)
+  const [delActive,setDelActive] = useState(false)
+  const onClickAddBtn = ()=>{
+    setAddActive(!addActive)
+    if (delActive){
+      setDelActive(false)
+    }
+  }
+  const onClickDelBtn = ()=>{
+    setDelActive(!delActive)
+    if (addActive){
+      setAddActive(false)
+    }
+  }
   return (
     <div className="calendar-wrap">
       <div className="calendar-inner">
@@ -87,18 +103,21 @@ const Calendar = () => {
         </div>
       </div>
       <div className="calendar-info">
+        <div className="calendar-info-front">
         <h1 id="month" className="calendar-head">
           {getMonth()}
         </h1>
         <div className="calendar-body">
           <MemoDetailBox/>
           <p className="calendar-btns">
-            <button></button>
-            <button></button>
+            <button className="memo_add_btn" onClick={onClickAddBtn}><span></span><span></span></button>
+            <button className="memo_dek_btn" onClick={onClickDelBtn}><span></span></button>
           </p>
         </div>
-        <AddModal/>
-        <DeleteModal/>
+        </div>
+        
+        <AddModal addActive={addActive}/>
+        <DeleteModal delActive={delActive}/>
       </div>
     </div>
   );

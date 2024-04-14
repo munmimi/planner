@@ -1,4 +1,5 @@
 import React from "react";
+import SpiritSwiper from "./SpiritSwiper";
 
 const SkillsSprits = () => {
   return (
@@ -14,7 +15,7 @@ const SkillsSprits = () => {
       </div>
       <div className="intro-sksp-sp">
         <h2><span>Sprits</span></h2>
-
+          <SpiritSwiper/>
       </div>
     </div>
   );
